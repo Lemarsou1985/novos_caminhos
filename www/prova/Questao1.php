@@ -22,7 +22,5 @@
 
 function centuryFromYear($year)
 {
-
-    // CÓDIGO ...
-
+    return (int) (($year-1)/ 100)+1;
 }
