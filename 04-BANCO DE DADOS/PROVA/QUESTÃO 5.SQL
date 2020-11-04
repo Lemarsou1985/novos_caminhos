@@ -18,7 +18,27 @@ id_customers (FK)	numeric
 cnpj                varchar(18)
 contact             varchar(25) 
 
+
+
 -- VALORES A SEREM INSERIDOS DENTRO DA TABELA CUSTOMERS
+CREATE TABLE CUSTOMERS (
+  id numeric PRIMARY KEY,
+  name varchar(50),
+  street varchar(50),
+  city varchar(50),
+  state varchar(2)
+  credit_limit numeric
+);
+
+
+INSERT INTO CUSTOMERS (id, name, street, city, state, credit_limit)
+VALUES
+  (1,	'Nicolas Diogo Cardoso',	'Acesso Um',	'Canoas', 'Porto Alegre', 'RS', '475'),
+  (2, 'Cecília Olivia Rodrigues',	'Rua Sizuka',	'Cianorte','PR','3170'),
+  (3,	'Augusto F. C. E. Cardoso',	'Rua Baldomiro',	'Palhoça','SC','1067'),
+  (4,	'Nicolas Diogo Cardoso',	'Acesso Um',	'Porto Alegre','RS','475'),
+  (5,	'Sabrina H. G. Barros',	'Rua Engenheiro',	'Porto Alegre', 'RS', '4312'),
+  (6,	'Joaquim D. L. Araújo',	'Rua Vitorino',	'Novo Hamburgo', 'RS', '231');
 
 id    name                      street          city	        state   credit_limit
 1	  Nicolas Diogo Cardoso	    Acesso Um	    Porto Alegre	RS	    475
@@ -29,6 +49,21 @@ id    name                      street          city	        state   credit_limi
 6	  Joaquim D. L. Araújo      Rua Vitorino	Novo Hamburgo	RS	    231 
 
 -- VALORES A SEREM INSERIDOS DENTRO DA TABELA LEGAL_PERSON
+CREATE TABLE LEGAL_PERSON (
+  id_customers numeric CONSTRAINT foreign key,
+  cnpj varchar(18),
+  contact varchar(25)  
+);
+
+
+INSERT INTO LEGAL_PERSON (id_customers, cnpj, contact)
+VALUES
+  (4,	'85883842000191',	'99767-0562'),
+  (5, '47773848000117',	'99100-8965');
+  
+
+
+
 id_customers	cnpj        	contact
 4	            85883842000191	99767-0562	
 5	            47773848000117	99100-8965 

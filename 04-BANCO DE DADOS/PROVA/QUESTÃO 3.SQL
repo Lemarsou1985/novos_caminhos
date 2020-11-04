@@ -12,6 +12,18 @@ id (PK)	        integer
 name            varchar
 
 -- VALORES A SEREM INSERIDOS DENTRO DA TABELA VIRUS
+CREATE TABLE VIRUS (
+  id integer PRIMARY KEY,
+  name varchar(50),
+);
+
+INSERT INTO VIRUS (id, name)
+VALUES
+  (1, '1',	'H1RT'),
+  (2, '2',	'H7H1'),
+  (3, '3',	'HUN8'),
+  (4, '4', 'XH1HX'),
+  (5, '5',	'XXXX');
 
 id    name                             
 1	  H1RT	        
@@ -21,6 +33,8 @@ id    name
 5	  XXXX	    	 
 
 -- EXEMPLO DE SAÍDA ESPERADO
+ SELECT REPLACE(name,'H1','X') FROM virus;
+
 name
 XRT
 H7X

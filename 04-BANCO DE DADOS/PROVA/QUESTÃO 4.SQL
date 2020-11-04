@@ -14,6 +14,20 @@ login       	varchar
 password	    varchar    
 
 -- VALORES A SEREM INSERIDOS DENTRO DA TABELA CUSTOMERS
+CREATE TABLE ACCOUNT (
+  id integer PRIMARY KEY,
+  name varchar(50),
+  login varchar(50),
+  password varchar(50)
+);
+
+INSERT INTO ACCOUNT (id, name, login, password)
+VALUES
+  (1, 'Joyce P. Parry',	'Promeraw','noh1Oozei'),
+  (2, 'Michael T. Gonzalez',	'Phers1942','Iath3see9bi'),
+  (3, 'Heather W. Lawless',	'Hankicht', 'diShono4'),
+  (4, 'Otis C. Hitt', 'H1RT', 'Conalothe', 'zooFohH7w'),
+  (5, 'Roger N. Brownfield',	'Worseente', 'fah7ohN');
 
 id    name                      login           password       
 1	  Joyce P. Parry	        Promeraw	    noh1Oozei
